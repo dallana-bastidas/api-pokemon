@@ -1,10 +1,18 @@
 
-
+let buscary = document.querySelector("#buscar")
 let btnP = document.querySelector("#btnPrev")
 let btnN = document.querySelector("#btnNext")
 
 btnP.setAttribute(`data-url-pokemon`, ``)
 btnN.setAttribute(`data-url-pokemon`, `https://pokeapi.co/api/v2/pokemon?offset=20&limit=20`)
+
+buscary.addEventListener(`click`,function(e){
+    console.log("hola")
+
+
+}
+
+)
 
 btnN.addEventListener(`click`, function (e) {
     let urlPoke = e.target.getAttribute(`data-url-pokemon`)
