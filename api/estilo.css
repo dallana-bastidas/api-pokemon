@@ -1,0 +1,30 @@
+body {
+    background-image: url(img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pokemonNom {
+    display: flex;
+    justify-content: center;
+
+}
+
+.pokemonImg {
+    margin: none;
+}
+
+.pokemon {
+    margin: 20px;
+}
+
+.fondo {
+    background-image: url(blob.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carta {
+    margin: 10px;
+    border-radius: 50px;
+}
