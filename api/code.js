@@ -6,8 +6,8 @@ let btnN = document.querySelector("#btnNext")
 btnP.setAttribute(`data-url-pokemon`, ``)
 btnN.setAttribute(`data-url-pokemon`, `https://pokeapi.co/api/v2/pokemon?offset=20&limit=20`)
 
-buscary.addEventListener(`click`,function(e){
-    console.log("hola")
+buscary.addEventListener(`click`, function (e) {
+    e.preventDefault();
 
 
 }
