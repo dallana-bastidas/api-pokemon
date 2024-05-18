@@ -1,18 +1,19 @@
-
 let buscary = document.querySelector("#buscar")
+let input = document.querySelector("#myInput")
 let btnP = document.querySelector("#btnPrev")
 let btnN = document.querySelector("#btnNext")
 
 btnP.setAttribute(`data-url-pokemon`, ``)
 btnN.setAttribute(`data-url-pokemon`, `https://pokeapi.co/api/v2/pokemon?offset=20&limit=20`)
 
-buscary.addEventListener(`click`, function (e) {
-      e.preventDefault();
-
-
+let form = document.querySelector("#pokeDex");
+form.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+    let input = form.querySelector(`input`).value;
+    console.log(input)
 }
-
 )
+
 
 btnN.addEventListener(`click`, function (e) {
     let urlPoke = e.target.getAttribute(`data-url-pokemon`)
