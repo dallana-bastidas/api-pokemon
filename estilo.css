@@ -30,13 +30,8 @@ svg {
   margin: 20px;
 }
 
-.fondo {
-  background-image: url(blob.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .carta {
   margin: 10px;
   border-radius: 50px;
+  overflow: hidden;
 }
