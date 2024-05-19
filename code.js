@@ -8,12 +8,16 @@ const btnN = document.querySelector("#btnNext");
 const form = document.querySelector("#pokeDex");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  document.querySelector("#spinner").style.display = "block";
   const input = form.querySelector(`input`).value;
 
   const res = fetch(`${URL_POKEMONES}/${input.toLowerCase()}`);
 
   res
-    .then((Promesa) => Promesa.json())
+    .then((Promesa) => {
+      return Promesa.json();
+    })
+    .catch(() => alert("Pokemon no encontrado"))
     .then((infoPokemon) => {
       let grilla = document.querySelector("#grilla-personajes");
       grilla.innerHTML = `
@@ -32,7 +36,8 @@ form.addEventListener("submit", function (e) {
             </div>
          </div>
          `;
-    });
+    })
+    .finally(() => (document.querySelector("#spinner").style.display = "none"));
 });
 
 btnN.addEventListener(`click`, function (e) {

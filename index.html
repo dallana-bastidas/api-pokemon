@@ -16,9 +16,22 @@
   <body>
     <!-- <img src="img/pokemon_logo2.png" class="logo w-25  "> -->
     <form id="pokeDex" class="d-flex justify-content-center mt-4">
-      <input type="texto" id="myInput" name="pokemon" autocomplete="off" />
-      <button type="submit" id="buscar">buscar</button>
+      <input
+        class="form-control w-25 me-4"
+        id="myInput"
+        name="pokemon"
+        autocomplete="off"
+      />
+      <button type="submit" id="buscar" class="btn btn-dark">Buscar</button>
     </form>
+
+    <div
+      id="spinner"
+      class="spinner-border text-dark mx-auto mt-4"
+      role="status"
+    >
+      <span class="visually-hidden">Loading...</span>
+    </div>
 
     <section class="pokemons container py-5">
       <div
@@ -34,10 +47,6 @@
         </button>
       </section>
     </section>
-    <!--
-    <div id="spinner" class="spinner-border text-dark" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
