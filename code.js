@@ -5,7 +5,7 @@ const input = document.querySelector("#myInput");
 const btnP = document.querySelector("#btnPrev");
 const btnN = document.querySelector("#btnNext");
 
-const typeColors = {
+const TYPE_COLOR = {
   normal: "#A8A878",
   fire: "#F08030",
   water: "#6890F0",
@@ -94,8 +94,8 @@ function listar_pokemon(urlPokemones = `${URL_POKEMONES}?offset=0&limit=4`) {
         llamarPokemon
           .then((llamada) => llamada.json())
           .then((infoPokemon) => {
-            // value mapping
-            const POKEMON_COLOR = typeColors[infoPokemon.types[0].type.name];
+            //  lookup table https://www.youtube.com/watch?v=0NlsJuwFsrQ
+            const POKEMON_COLOR = TYPE_COLOR[infoPokemon.types[0].type.name];
 
             grilla.innerHTML += `
         <div class="col">
