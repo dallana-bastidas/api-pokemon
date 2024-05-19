@@ -60,7 +60,7 @@ btnP.addEventListener(`click`, function (e) {
 
 listar_pokemon();
 
-function listar_pokemon(urlPokemones = `${URL_POKEMONES}?offset=4&limit=4`) {
+function listar_pokemon(urlPokemones = `${URL_POKEMONES}?offset=0&limit=4`) {
   let grilla = document.querySelector("#grilla-personajes");
   grilla.innerHTML = ``;
   let llamado = fetch(urlPokemones);
@@ -76,6 +76,7 @@ function listar_pokemon(urlPokemones = `${URL_POKEMONES}?offset=4&limit=4`) {
             grilla.innerHTML += `
         <div class="col">
             <div class="card carta">
+
 
             <div class="fondo">
                 <img src="${infoPokemon.sprites.other["official-artwork"].front_default}" class="pokemonImg img-container card-img-top mt-5 p-4" alt="...">
