@@ -5,12 +5,17 @@ const input = document.querySelector("#myInput");
 const btnP = document.querySelector("#btnPrev");
 const btnN = document.querySelector("#btnNext");
 
+input.addEventListener("input", function (e) {
+  if (e.target.value === "") {
+    listar_pokemon();
+  }
+});
+
 const form = document.querySelector("#pokeDex");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   document.querySelector("#spinner").style.display = "block";
   const input = form.querySelector(`input`).value;
-
   const res = fetch(`${URL_POKEMONES}/${input.toLowerCase()}`);
 
   res
