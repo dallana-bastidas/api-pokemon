@@ -75,8 +75,6 @@ function listar_pokemon(urlPokemones = `${URL_POKEMONES}?offset=4&limit=4`) {
           .then((infoPokemon) => {
             grilla.innerHTML += `
         <div class="col">
-
-
             <div class="card carta">
 
             <div class="fondo">

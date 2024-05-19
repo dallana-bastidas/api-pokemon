@@ -8,6 +8,15 @@
   display: none;
 }
 
+a {
+  color: initial;
+}
+
+svg {
+  width: auto;
+  height: 30px;
+}
+
 .pokemonNom {
   display: flex;
   justify-content: center;
